@@ -1,0 +1,7 @@
+_target_: src.data.dataset.LLTDataset
+dataset: anet
+feature_path: /data/features/anet
+annotations_path: data/activitynet_annotations/anet_anno_action.json
+metadata_path: data/activitynet_annotations/video_info_new.csv
+setting: ${model.setting}
+split: ${model.split}

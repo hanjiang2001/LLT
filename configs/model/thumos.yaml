@@ -1,0 +1,23 @@
+_target_: src.models.llt_module.LLTModule
+dataset: thumos
+split: 0
+setting: 50
+fps_path: ${paths.thumos_fps}
+annotations_path: ${data.annotations_path}
+output_dir: ${paths.output_dir}
+net:
+  _target_: src.models.components.llt.LLTNet
+  dataset: ${model.dataset}
+  split: ${model.split}
+  setting: ${model.setting}
+  checkpoint_path: ${paths.checkpoint_path}
+  stride: 20
+  randper: 10
+  kernel_size: 20
+  n: 4
+  normalize: true
+  remove_background: true
+  steps: 60
+  lookup_capacity: 4
+  text_momentum: 0.6
+  update_threshold: 0.7

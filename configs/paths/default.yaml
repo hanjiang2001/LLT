@@ -1,0 +1,4 @@
+checkpoint_path: /data/checkpoints/coca/open_clip_pytorch_model.bin
+thumos_fps: config/thumos_fps.json
+anet_fps: /data/activitynet_fps.json
+output_dir: ${hydra:runtime.output_dir}
